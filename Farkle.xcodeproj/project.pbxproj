@@ -13,6 +13,7 @@
 		35E542771D03666C00ADFEEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E542751D03666C00ADFEEB /* Main.storyboard */; };
 		35E542791D03666C00ADFEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E542781D03666C00ADFEEB /* Assets.xcassets */; };
 		35E5427C1D03666C00ADFEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E5427A1D03666C00ADFEEB /* LaunchScreen.storyboard */; };
+		35E542881D03692E00ADFEEB /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E542871D03692E00ADFEEB /* DieLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		35E542781D03666C00ADFEEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35E5427B1D03666C00ADFEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E5427D1D03666C00ADFEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E542861D03692E00ADFEEB /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
+		35E542871D03692E00ADFEEB /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				35E542701D03666C00ADFEEB /* AppDelegate.m */,
 				35E542721D03666C00ADFEEB /* ViewController.h */,
 				35E542731D03666C00ADFEEB /* ViewController.m */,
+				35E542861D03692E00ADFEEB /* DieLabel.h */,
+				35E542871D03692E00ADFEEB /* DieLabel.m */,
 				35E542751D03666C00ADFEEB /* Main.storyboard */,
 				35E542781D03666C00ADFEEB /* Assets.xcassets */,
 				35E5427A1D03666C00ADFEEB /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 				35E542741D03666C00ADFEEB /* ViewController.m in Sources */,
 				35E542711D03666C00ADFEEB /* AppDelegate.m in Sources */,
 				35E5426E1D03666C00ADFEEB /* main.m in Sources */,
+				35E542881D03692E00ADFEEB /* DieLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
