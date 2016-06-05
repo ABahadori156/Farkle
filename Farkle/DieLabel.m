@@ -8,11 +8,31 @@
 
 #import "DieLabel.h"
 
-@interface DieLabel ()  <UIGestureRecognizerDelegate>
+@interface DieLabel ()  <UIGestureRecognizerDelegate, DieLabelDelegate>
 
 @end
 
-@implementation DieLabel 
+@implementation DieLabel
+
+- (instancetype) initWithCoder:(NSCoder *)aDecoder {
+    
+    self = [super initWithCoder:aDecoder];
+    self.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapLabelWithGesture:)];
+    
+    return self;
+    
+}
+
+                                                                                                       
+ - (void)didTapLabelWithGesture:(UITapGestureRecognizer *)tapGesture {
+     NSLog(@"Die button tapped");
+ }
+                                                                                                       
+
+
+
 - (void)roll {
     int randomNum = arc4random() % 5;
     if (randomNum==0) {
@@ -35,11 +55,29 @@
     }
     
     
-    
+//    [self.dice = [NSMutableArray alloc] ]
 }
 
-// set the label’s text to a random number between 1 and 6.
+//[self.delegate dieLabelDelegateFunction];
 
+
+
+
+/*
+ - (IBAction)onColorTap:(UIButton *)sender {
+ [self.delegate customizationView:self updateForButton:sender];
+ [self removeFromSuperview];
+ }
+ 
+ In your DieLabelDelegate protocol method implementation add the DieLabel instance to your dice array
+ 
+ 
+ DONE-When the DieLabel is tapped, call the delegate-protocol method on the DieLabel’s delegate property
+ 
+ hint: You write this code in DieLabel.m
+
+ 
+*/
 
 
 

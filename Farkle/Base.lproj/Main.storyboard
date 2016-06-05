@@ -92,6 +92,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="m0s-FH-atO" appends="YES" id="ESR-8n-L1o"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="dieGesture1" destination="6C3-Zy-Cum" id="Oxo-q1-RVd"/>
@@ -115,6 +119,7 @@
                 <tapGestureRecognizer id="zSf-7v-g1a"/>
                 <tapGestureRecognizer id="sxh-bS-eXG"/>
                 <tapGestureRecognizer id="7RC-8u-G7R"/>
+                <tapGestureRecognizer id="m0s-FH-atO"/>
             </objects>
             <point key="canvasLocation" x="245" y="337"/>
         </scene>

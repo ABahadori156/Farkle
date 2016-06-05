@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "DieLabel.h"
 
-@interface ViewController () <UIGestureRecognizerDelegate>
+@interface ViewController () <UIGestureRecognizerDelegate, DieLabelDelegate>
 @property (weak, nonatomic) IBOutlet DieLabel *dieLabel;
 @property (weak, nonatomic) IBOutlet DieLabel *dieLabel2;
 @property (weak, nonatomic) IBOutlet DieLabel *dieLabel3;
@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet DieLabel *dieLabel6;
 
 @property NSArray <DieLabel*> *dieLabels;
+@property NSMutableArray *dice;
 //@property NSArray <DieLabel *> *dieLabelArray;
 
 
@@ -46,6 +47,9 @@
     
     [self setupGestureRecognizer];
 
+    for (DieLabel *myDie in self.dieLabels) {
+        myDie.delegate = self;
+    }
 }
 
 
@@ -75,15 +79,21 @@
 
 - (void)didTapLabelWithGesture:(UITapGestureRecognizer *)tapGesture {
     NSLog(@"Die button tapped");
+    
 }
 
 -(void)setupGestureRecognizer {
-    self.dieLabel.userInteractionEnabled = YES;
-    self.dieLabel2.userInteractionEnabled = YES;
-    self.dieLabel3.userInteractionEnabled = YES;
-    self.dieLabel4.userInteractionEnabled = YES;
-    self.dieLabel5.userInteractionEnabled = YES;
-    self.dieLabel6.userInteractionEnabled = YES;
+//    self.dieLabel.userInteractionEnabled = YES;
+//    self.dieLabel2.userInteractionEnabled = YES;
+//    self.dieLabel3.userInteractionEnabled = YES;
+//    self.dieLabel4.userInteractionEnabled = YES;
+//    self.dieLabel5.userInteractionEnabled = YES;
+//    self.dieLabel6.userInteractionEnabled = YES;
+//    
+    for (DieLabel *myDie in self.dieLabels) {
+        myDie.userInteractionEnabled = YES;
+        
+    }
     
  
 
@@ -118,15 +128,13 @@
 }
 
 - (IBAction)onRollButtonPressed:(UIButton *)sender {
-//    NSArray *myDie;
-
     for (DieLabel *myDie in self.dieLabels) {
         [myDie roll];
         NSLog(@"%@",myDie.text);
     }
-    
-    
 }
+
+
 
 
 
