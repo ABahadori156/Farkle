@@ -45,10 +45,11 @@
     self.dieLabels = [[NSArray alloc] initWithObjects: self.dieLabel, self.dieLabel2, self.dieLabel3, self.dieLabel4, self.dieLabel5, self.dieLabel6, nil];
 
     
-    [self setupGestureRecognizer];
+//    [self setupGestureRecognizer];
 
     for (DieLabel *myDie in self.dieLabels) {
         myDie.delegate = self;
+        
     }
 }
 
@@ -77,10 +78,10 @@
 //}
 
 
-- (void)didTapLabelWithGesture:(UITapGestureRecognizer *)tapGesture {
-    NSLog(@"Die button tapped");
-    
-}
+//- (void)didTapLabelWithGesture:(UITapGestureRecognizer *)tapGesture {
+//    NSLog(@"Die button tapped");
+//    
+//}
 
 -(void)setupGestureRecognizer {
 //    self.dieLabel.userInteractionEnabled = YES;
@@ -90,37 +91,39 @@
 //    self.dieLabel5.userInteractionEnabled = YES;
 //    self.dieLabel6.userInteractionEnabled = YES;
 //    
-    for (DieLabel *myDie in self.dieLabels) {
-        myDie.userInteractionEnabled = YES;
-        
-    }
+//    for (DieLabel *myDie in self.dieLabels) {
+//        myDie.userInteractionEnabled = YES;
+//        
+//    }
     
  
 
     
-    [self.dieGesture1 addTarget:self action:@selector(didTapLabelWithGesture:)];
-    [self.dieGesture2 addTarget:self action:@selector(didTapLabelWithGesture:)];
-    [self.dieGesture3 addTarget:self action:@selector(didTapLabelWithGesture:)];
-    [self.dieGesture4 addTarget:self action:@selector(didTapLabelWithGesture:)];
-    [self.dieGesture5 addTarget:self action:@selector(didTapLabelWithGesture:)];
-    [self.dieGesture6 addTarget:self action:@selector(didTapLabelWithGesture:)];
-    
+//    [self.dieGesture1 addTarget:self action:@selector(didTapLabelWithGesture:)];
+//    [self.dieGesture2 addTarget:self action:@selector(didTapLabelWithGesture:)];
+//    [self.dieGesture3 addTarget:self action:@selector(didTapLabelWithGesture:)];
+//    [self.dieGesture4 addTarget:self action:@selector(didTapLabelWithGesture:)];
+//    [self.dieGesture5 addTarget:self action:@selector(didTapLabelWithGesture:)];
+//    [self.dieGesture6 addTarget:self action:@selector(didTapLabelWithGesture:)];
+//    
     // below we set the delegate of tapgesture
 
+    // This was dragging from gesturerecognizer to view controller and creating a delegate. This was the manual ver
+//    self.dieGesture1.delegate = self;
+//    self.dieGesture2.delegate = self;
+//    self.dieGesture3.delegate = self;
+//    self.dieGesture4.delegate = self;
+//    self.dieGesture5.delegate = self;
+//    self.dieGesture6.delegate = self;
     
-    self.dieGesture1.delegate = self;
-    self.dieGesture2.delegate = self;
-    self.dieGesture3.delegate = self;
-    self.dieGesture4.delegate = self;
-    self.dieGesture5.delegate = self;
-    self.dieGesture6.delegate = self;
     
-    [self.dieLabel addGestureRecognizer:self.dieGesture1];
-    [self.dieLabel2 addGestureRecognizer:self.dieGesture2];
-    [self.dieLabel3 addGestureRecognizer:self.dieGesture3];
-    [self.dieLabel4 addGestureRecognizer:self.dieGesture4];
-    [self.dieLabel5 addGestureRecognizer:self.dieGesture5];
-    [self.dieLabel6 addGestureRecognizer:self.dieGesture6];
+    // This is dragging gesture recognizer from object library on top of each label.
+//    [self.dieLabel addGestureRecognizer:self.dieGesture1];
+//    [self.dieLabel2 addGestureRecognizer:self.dieGesture2];
+//    [self.dieLabel3 addGestureRecognizer:self.dieGesture3];
+//    [self.dieLabel4 addGestureRecognizer:self.dieGesture4];
+//    [self.dieLabel5 addGestureRecognizer:self.dieGesture5];
+//    [self.dieLabel6 addGestureRecognizer:self.dieGesture6];
     
     
     
@@ -134,6 +137,9 @@
     }
 }
 
+- (IBAction)tappedGesture:(UITapGestureRecognizer *)sender {
+    NSLog(@"dietapped");
+}
 
 
 

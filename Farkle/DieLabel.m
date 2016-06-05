@@ -14,24 +14,22 @@
 
 @implementation DieLabel
 
-- (instancetype) initWithCoder:(NSCoder *)aDecoder {
-    
-    self = [super initWithCoder:aDecoder];
-    self.userInteractionEnabled = YES;
-    
-    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapLabelWithGesture:)];
-    
-    return self;
-    
-}
+//- (instancetype) initWithCoder:(NSCoder *)aDecoder {
+//    
+//    self = [super initWithCoder:aDecoder];
+//    self.userInteractionEnabled = YES;
+//    
+//    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapLabelWithGesture:)];
+//    
+//    return self;
+//    
+//}
 
                                                                                                        
  - (void)didTapLabelWithGesture:(UITapGestureRecognizer *)tapGesture {
      NSLog(@"Die button tapped");
  }
                                                                                                        
-
-
 
 - (void)roll {
     int randomNum = arc4random() % 5;
@@ -57,6 +55,18 @@
     
 //    [self.dice = [NSMutableArray alloc] ]
 }
+
+-(void)dieLabelDelegateFunction {
+    
+    NSLog(@"Working");
+}
+
+
+
+
+
+
+
 
 //[self.delegate dieLabelDelegateFunction];
 
