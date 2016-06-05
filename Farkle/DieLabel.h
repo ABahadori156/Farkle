@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DieLabel : UILabel
-@property NSString *label;
+
+
+
 
 @end

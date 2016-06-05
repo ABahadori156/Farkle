@@ -14,19 +14,6 @@
 
 @implementation DieLabel 
 
-- (void)someSetupMethod {
-    // ...
-    label.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tapGesture = \
-    [[UITapGestureRecognizer alloc]
-     initWithTarget:self action:@selector(didTapLabelWithGesture:)];
-    [label addGestureRecognizer:tapGesture];
-    
-}
-
-- (void)didTapLabelWithGesture:(UITapGestureRecognizer *)tapGesture {
-    // ...
-}
 
 
 @end
