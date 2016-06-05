@@ -17,27 +17,32 @@
 @property (weak, nonatomic) IBOutlet DieLabel *dieLabel5;
 @property (weak, nonatomic) IBOutlet DieLabel *dieLabel6;
 
+//@property NSArray <DieLabel *> *dieLabelArray;
 
 
 
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *dieGesture1;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *dieGesture2;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *dieGesture3;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *dieGesture4;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *dieGesture5;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *dieGesture6;
+
 
 @end
 
 @implementation ViewController
 
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupGestureRecognizer];
-    [self.dieLabel addGestureRecognizer:self.dieGesture1];
-    [self.dieLabel2 addGestureRecognizer:self.dieGesture1];
-    [self.dieLabel3 addGestureRecognizer:self.dieGesture1];
-    [self.dieLabel4 addGestureRecognizer:self.dieGesture1];
-    [self.dieLabel5 addGestureRecognizer:self.dieGesture1];
-    
-    
+
 }
 
 
@@ -71,13 +76,45 @@
 
 -(void)setupGestureRecognizer {
     self.dieLabel.userInteractionEnabled = YES;
+    self.dieLabel2.userInteractionEnabled = YES;
+    self.dieLabel3.userInteractionEnabled = YES;
+    self.dieLabel4.userInteractionEnabled = YES;
+    self.dieLabel5.userInteractionEnabled = YES;
+    self.dieLabel6.userInteractionEnabled = YES;
+    
+ 
+
     
     [self.dieGesture1 addTarget:self action:@selector(didTapLabelWithGesture:)];
+    [self.dieGesture2 addTarget:self action:@selector(didTapLabelWithGesture:)];
+    [self.dieGesture3 addTarget:self action:@selector(didTapLabelWithGesture:)];
+    [self.dieGesture4 addTarget:self action:@selector(didTapLabelWithGesture:)];
+    [self.dieGesture5 addTarget:self action:@selector(didTapLabelWithGesture:)];
+    [self.dieGesture6 addTarget:self action:@selector(didTapLabelWithGesture:)];
     
     // below we set the delegate of tapgesture
+
+    
     self.dieGesture1.delegate = self;
+    self.dieGesture2.delegate = self;
+    self.dieGesture3.delegate = self;
+    self.dieGesture4.delegate = self;
+    self.dieGesture5.delegate = self;
+    self.dieGesture6.delegate = self;
+    
+    [self.dieLabel addGestureRecognizer:self.dieGesture1];
+    [self.dieLabel2 addGestureRecognizer:self.dieGesture2];
+    [self.dieLabel3 addGestureRecognizer:self.dieGesture3];
+    [self.dieLabel4 addGestureRecognizer:self.dieGesture4];
+    [self.dieLabel5 addGestureRecognizer:self.dieGesture5];
+    [self.dieLabel6 addGestureRecognizer:self.dieGesture6];
+    
+    
+    
     
 }
+
+
 
 
 // Create a UITapGesture object in the initWithCoder method and set the action to the method you created earlier

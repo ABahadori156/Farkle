@@ -13,6 +13,34 @@
 @end
 
 @implementation DieLabel 
+- (void)rollDie {
+    int randomNum = arc4random() % 5;
+    if (randomNum==0) {
+        self.text = @"1";
+    }
+    else if (randomNum ==1) {
+        self.text = @"2";
+    }
+    else if (randomNum ==2) {
+        self.text = @"3";
+    }
+    else if (randomNum ==3) {
+        self.text = @"4";
+    }
+    else if (randomNum ==4) {
+        self.text = @"5";
+    }
+    else {
+        self.text = @"6";
+    }
+    
+    
+    
+}
+
+// set the label’s text to a random number between 1 and 6.
+
+
 
 
 

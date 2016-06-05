@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DieLabel : UILabel
+- (void)rollDie;
 
 
 
