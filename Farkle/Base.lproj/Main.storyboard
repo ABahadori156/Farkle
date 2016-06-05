@@ -83,6 +83,13 @@
                                     <outletCollection property="gestureRecognizers" destination="7RC-8u-G7R" appends="YES" id="ZPM-jK-rPH"/>
                                 </connections>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuB-uI-gfT">
+                                <rect key="frame" x="257" y="285" width="60" height="30"/>
+                                <state key="normal" title="Roll Dice"/>
+                                <connections>
+                                    <action selector="onRollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v21-eO-llD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

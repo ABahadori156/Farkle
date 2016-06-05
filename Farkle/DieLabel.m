@@ -13,7 +13,7 @@
 @end
 
 @implementation DieLabel 
-- (void)rollDie {
+- (void)roll {
     int randomNum = arc4random() % 5;
     if (randomNum==0) {
         self.text = @"1";

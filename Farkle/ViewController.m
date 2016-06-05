@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet DieLabel *dieLabel5;
 @property (weak, nonatomic) IBOutlet DieLabel *dieLabel6;
 
+@property NSArray <DieLabel*> *dieLabels;
 //@property NSArray <DieLabel *> *dieLabelArray;
 
 
@@ -40,6 +41,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dieLabels = [[NSArray alloc] initWithObjects: self.dieLabel, self.dieLabel2, self.dieLabel3, self.dieLabel4, self.dieLabel5, self.dieLabel6, nil];
+
     
     [self setupGestureRecognizer];
 
@@ -114,24 +117,19 @@
     
 }
 
+- (IBAction)onRollButtonPressed:(UIButton *)sender {
+//    NSArray *myDie;
+
+    for (DieLabel *myDie in self.dieLabels) {
+        [myDie roll];
+        NSLog(@"%@",myDie.text);
+    }
+    
+    
+}
 
 
 
-// Create a UITapGesture object in the initWithCoder method and set the action to the method you created earlier
-
-
-
-
-
-//- (void)someSetupMethod {
-//    // ...
-//    self.dieLabel.userInteractionEnabled = YES;
-//    UITapGestureRecognizer *tapGesture = \
-//    [[UITapGestureRecognizer alloc]
-//     initWithTarget:self action:@selector(didTapLabelWithGesture:)];
-//    [self.dieLabel addGestureRecognizer:tapGesture];
-//    
-//}
 
 
 
